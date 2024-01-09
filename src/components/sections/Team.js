@@ -112,7 +112,7 @@ const MemberComponent = ({ img, name = " ", position = "" }) => {
 
 const Team = () => {
   return (
-    <Section>
+    <Section id="team">
       <Confetti />
       <Title>Team</Title>
       <Container>
