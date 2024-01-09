@@ -54,12 +54,12 @@ const Navigation = () => {
     });
   };
   return (
-    <Section>
+    <Section id="navigation">
       <Navbar>
         <Logo />
 
         <Menu>
-          <MenuItem onClick={() => scrollTo("home")}>Home</MenuItem>
+          <MenuItem onClick={() => scrollTo("navigation")}>Home</MenuItem>
           <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
           <MenuItem onClick={() => scrollTo("roadmap")}>Roadmap</MenuItem>
           <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>

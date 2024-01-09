@@ -138,7 +138,7 @@ const Footer = () => {
           </IconList>
         </Left>
         <MenuItems>
-          <Item onClick={() => scrollTo("home")}>Home</Item>
+          <Item onClick={() => scrollTo("navigation")}>Home</Item>
           <Item onClick={() => scrollTo("about")}>About</Item>
           <Item onClick={() => scrollTo("roadmap")}>Roadmap</Item>
           <Item onClick={() => scrollTo("showcase")}>Showcase</Item>
