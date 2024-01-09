@@ -137,7 +137,6 @@ const Roadmap = () => {
   };
 
   useLayoutEffect(() => {
-    console.log(revealRefs);
     let t1 = gsap.timeline();
     revealRefs.current.forEach((el, index) => {
       t1.fromTo(
