@@ -9,6 +9,7 @@ const Title = styled.h2`
   text-transform: capitalize;
   color: ${(props) => props.theme.text};
   align-self: flex-start;
+  width: 80%;
 
   span {
     text-transform: uppercase;
