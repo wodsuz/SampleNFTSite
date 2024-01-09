@@ -44,9 +44,9 @@ const Box = styled.div`
 const Faq = () => {
   const ref = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
-
   useLayoutEffect(() => {
     let element = ref.current;
+
     ScrollTrigger.create({
       trigger: element,
       start: "top top",
@@ -55,7 +55,9 @@ const Faq = () => {
       pinSpaceing: false,
       scrub: true,
     });
-    return () => {};
+    return () => {
+      ScrollTrigger.kill();
+    };
   }, []);
 
   return (
