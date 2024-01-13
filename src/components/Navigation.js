@@ -53,9 +53,10 @@ const Menu = styled.ul`
     transform: ${(props) =>
       props.click ? `translateY(0)` : `translateY(1000%)`};
     transition: transform 0.3s ease;
-
     flex-direction: column;
     justify-content: center;
+
+    touch-action: none;
   }
 `;
 
