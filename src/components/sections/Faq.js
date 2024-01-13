@@ -73,7 +73,7 @@ const Faq = () => {
       start: "top top",
       end: "bottom top",
       pin: true,
-      pinSpaceing: false,
+      pinSpacing: false,
       scrub: true,
     });
     return () => {
