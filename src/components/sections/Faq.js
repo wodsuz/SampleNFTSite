@@ -1,14 +1,13 @@
-import React, { useRef, useLayoutEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import React, { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import Accordion from "../Accordion";
 
 const Section = styled.section`
   min-height: 100vh;
-  width: 100vw;
   height: auto;
+  width: 100vw;
   background-color: ${(props) => props.theme.text};
   position: relative;
   color: ${(props) => props.theme.body};
@@ -39,16 +38,19 @@ const Container = styled.div`
 
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
+
   @media (max-width: 64em) {
     width: 80%;
   }
+
   @media (max-width: 48em) {
     width: 90%;
     flex-direction: column;
   }
-  & > *:last-child {
-    & > *:first-child {
+
+  & > *::last-child {
+    & > *::first-child {
       margin-top: 0;
     }
   }
@@ -56,6 +58,7 @@ const Container = styled.div`
 
 const Box = styled.div`
   width: 45%;
+
   @media (max-width: 64em) {
     width: 90%;
     align-self: center;
@@ -75,7 +78,9 @@ const Faq = () => {
       pin: true,
       pinSpacing: false,
       scrub: true,
+      // markers: true,
     });
+
     return () => {
       ScrollTrigger.kill();
     };
@@ -83,7 +88,7 @@ const Faq = () => {
 
   return (
     <Section ref={ref} id="faq">
-      <Title>Faq</Title>
+      <Title>FAQ</Title>
       <Container>
         <Box>
           <Accordion title="WHERE CAN I VIEW MY NFTS?">
@@ -118,10 +123,10 @@ const Faq = () => {
             unde inventore fugiat provident in.
           </Accordion>
           <Accordion title="WHAT IS THE FUSION PROCESS?">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-            deserunt consequatur quisquam maxime molestias dolores ipsum,
-            exercitationem vel sint quidem aliquam modi quis impedit corporis
-            unde inventore fugiat provident in.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel enim
+            veritatis iusto officia. Exercitationem, ducimus reiciendis. Rem,
+            maxime, similique neque minus aliquam dolore doloremque laboriosam,
+            facilis quibusdam unde sint officia.
           </Accordion>
         </Box>
       </Container>
